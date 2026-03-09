@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="auth-body">
+  <div class="auth-box">
+    <h2>Login</h2>
+    <input type="email" id="loginEmail" placeholder="Email" required>
+    <div class="password-box">
+      <input type="password" id="loginPassword" placeholder="Password" required>
+      <span class="toggle-eye" onclick="togglePassword('loginPassword', this)">🙈</span>
+    </div>
+    <button onclick="login()">Login</button>
+    <p><a href="signup.html">Signup</a> | <a href="forgot.html">Forgot Password?</a></p>
+  </div>
+</div>
+<script src="auth.js"></script>
+</body>
+</html>

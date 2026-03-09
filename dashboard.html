@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="sidebar">
+    <h2>Admin Panel</h2>
+    <ul>
+      <li onclick="showPage('home')">Home</li>
+      <li onclick="showPage('users')">Users</li>
+      <li onclick="showPage('tasks')">Tasks</li>
+      <li onclick="showPage('reports')">Reports</li>
+      <li onclick="logout()">Logout</li>
+    </ul>
+  </div>
+  <div class="main">
+    <div id="home" class="page">
+      <div class="cards">
+        <div class="card card-pastel1">
+          <h3>Total Users</h3>
+          <p id="totalUsers">0</p>
+        </div>
+        <div class="card card-pastel2">
+          <h3>Total Tasks</h3>
+          <p id="totalTasks">0</p>
+        </div>
+        <div class="card card-pastel3">
+          <h3>Reports</h3>
+          <p id="totalReports">0</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="users" class="page" style="display:none;">
+      <h2>Manage Users</h2>
+      <input type="text" id="searchUser" placeholder="Search user...">
+      <form onsubmit="addUser(event)">
+        <input type="text" id="newUserName" placeholder="Name" required>
+        <input type="email" id="newUserEmail" placeholder="Email" required>
+        <input type="password" id="newUserPassword" placeholder="Password" required>
+        <button type="submit">Add User</button>
+      </form>
+      <table id="usersTable">
+        <thead><tr><th>Name</th><th>Email</th><th>Role</th><th>Actions</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div id="tasks" class="page" style="display:none;">
+      <h2>Tasks</h2>
+      <table id="tasksTable">
+        <thead>
+          <tr><th>User</th><th>Task</th><th>Status</th><th>Remarks</th><th>Actions</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div id="reports" class="page" style="display:none;">
+      <h2>Reports</h2>
+      <table id="reportsTable">
+        <thead>
+          <tr><th>User</th><th>Report</th><th>Status</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<script src="dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+/* GENERAL RESET */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: Arial, sans-serif; background:#f0f4f8; }
+
+/* AUTH PAGES */
+.auth-body { display:flex; justify-content:center; align-items:center; height:100vh; }
+.auth-box { background:#fff; padding:30px; width:320px; border-radius:8px; box-shadow:0 4px 15px rgba(0,0,0,.1); text-align:center; }
+.auth-box input { width:100%; padding:10px; margin-bottom:12px; border-radius:6px; border:1px solid #ccc; }
+.auth-box button { width:100%; padding:10px; background:#457b9d; color:#fff; border:none; border-radius:6px; cursor:pointer; transition:.3s; }
+.auth-box button:hover { background:#1d3557; }
+
+/* PASSWORD TOGGLE */
+.password-box { position:relative; width:100%; }
+.password-box input { width:100%; padding-right:40px; }
+.password-box .toggle-eye { position:absolute; top:50%; right:10px; transform:translateY(-50%); cursor:pointer; font-size:18px; user-select:none; }
+/* DASHBOARD */
+.container { display:flex; min-height:100vh; }
+.sidebar { width:220px; background:#a8dadc; color:#1d3557; padding:20px; }
+.sidebar h2 { margin-bottom:20px; }
+.sidebar ul { list-style:none; padding:0; }
+.sidebar li { padding:12px 8px; cursor:pointer; border-radius:6px; transition:.2s; }
+.sidebar li:hover { background:#457b9d; color:#fff; }
+.main { flex:1; padding:30px; }
+
+/* CARDS */
+.cards { display:flex; flex-wrap:wrap; gap:20px; margin-bottom:30px; }
+.card { flex:1; min-width:150px; padding:20px; border-radius:12px; text-align:center; box-shadow:0 4px 8px rgba(0,0,0,.1); transition:.3s; }
+.card:hover { transform:translateY(-5px); box-shadow:0 8px 16px rgba(0,0,0,.2); }
+.card-pastel1 { background:#ffd6a5; } .card-pastel2 { background:#fdffb6; } .card-pastel3 { background:#caffbf; } .card-pastel4 { background:#9bf6ff; }
+
+/* TABLES & FORMS */
+table { width:100%; border-collapse:collapse; margin-top:15px; background:#fff; border-radius:6px; overflow:hidden; }
+table th, table td { padding:12px; text-align:center; border-bottom:1px solid #ccc; }
+table th { background:#a8dadc; color:#1d3557; }
+table tr:hover { background:#f1faee; }
+form input, form select { padding:8px; margin-right:10px; margin-bottom:10px; border-radius:6px; border:1px solid #ccc; }
+form button { padding:8px 15px; border:none; border-radius:6px; background:#457b9d; color:white; cursor:pointer; }
+form button:hover { background:#1d3557; }
+#searchUser { width:50%; padding:8px; margin-bottom:10px; border-radius:6px; border:1px solid #ccc; }
+.page { display:block; }
+@media(max-width:768px){ .container{flex-direction:column;} .sidebar{width:100%;} .cards{flex-direction:column;} #searchUser{width:100%;} }
